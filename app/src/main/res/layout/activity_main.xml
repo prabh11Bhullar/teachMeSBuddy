@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/txtGame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="Choose From Following"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:layout_weight="0.3"
+        />
+    <Button
+        android:id="@+id/btnGuessMe"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:text="GUESS NUMBER OF SIDES" />
+
+
+    <Button
+        android:id="@+id/btnRandom"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="0.2"
+        android:text="Choose Random"
+        >
+    </Button>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        >
+    </View>
+
+</LinearLayout>
