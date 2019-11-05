@@ -1,12 +1,18 @@
 package com.example.learnshapes;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.os.Debug;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class GuessMe extends AppCompatActivity {
 
@@ -44,6 +50,28 @@ public class GuessMe extends AppCompatActivity {
         choice3 = findViewById(R.id.choice3);
         layout2 = findViewById(R.id.layout2);
 
-        
+        displayShapes();
+
+        //1. Initialize your connection to the Particle API
+        ParticleCloudSDK.init(this.getApplicationContext());
+
+        // 2. Setup your device variable
+        getDeviceFromCloud();
+
     }
+    public void getDeviceFromCloud() {
+        {
+
+        }
+    }
+    public void displayShapes() {
+        int rndInt = (Math.random() < 0.5) ? 1 : 2;
+        imageGenerated = "shape" + rndInt;
+        int resID = getResources().getIdentifier(imageGenerated, "drawable", getPackageName());
+        shapes.setImageResource(resID);
+    }
+
+
+
 }
+
